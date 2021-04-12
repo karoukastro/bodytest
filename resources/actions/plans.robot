@@ -1,5 +1,5 @@
 ***Settings***
-Documentation       Acoes da feature de gestao de planos
+Documentation       Ações da feature de gestão de planos
 
 ***Variables***
 ${TITLE_FIELD}      id=title
@@ -7,24 +7,25 @@ ${DURATION_FIELD}   id=duration
 ${PRICE_FIELD}      css=input[name=price]
 ${TOTAL_FIELD}      css=input[name=total]
 
-**Keywords***
+***Keywords***
 ## Forms
 Submit Plan Form
-    Click              xpath=//button[contains(text(), "Salvar")]   
+    Click           xpath=//button[contains(text(), "Salvar")]
 
 Fill Plan Form
-    [Arguments]        ${plan}
+    [Arguments]     ${plan}
 
-    Fill Text          ${TITLE_FIELD}           ${plan.title}
-    Fill Text          ${DURATION_FIELD}        ${plan.duration}
-    Fill Text          ${PRICE_FIELD}           ${plan.price}
+    Fill Text       ${TITLE_FIELD}        ${plan.title}
+    Fill Text       ${DURATION_FIELD}     ${plan.duration}
+    Fill Text       ${PRICE_FIELD}        ${plan.price}
 
-Go to Form Plan
-    Click                           css=a[href$="planos/new"]       
-    Wait For Elements State         css=h1 >> text=Novo plano     visible     5  
+## Links & Buttons
+Go To Form Plan
+    Click       css=a[href$="planos/new"]
+    Wait For Elements State     css=h1 >> text=Novo plano     visible     5
 
 ## Validations
 Total Plan Should Be
-    [Arguments]         ${total}
+    [Arguments]     ${total}
 
-    Get Attribute       ${TOTAL_FIELD}      value       ==     ${total}
+    Get Attribute       ${TOTAL_FIELD}      value    ==    ${total}   
