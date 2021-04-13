@@ -5,12 +5,14 @@ Library         Browser
 Library         Collections
 Library         libs/DeloreanLibrary.py
 Library         OperatingSystem
+Library         DateTime
 
 Resource        actions/auth.robot
 Resource        actions/nav.robot
 Resource        actions/students.robot
 Resource        actions/components.robot
 Resource        actions/plans.robot
+Resource        actions/enrolls.robot
 
 ***Keywords***
 Start Browser Session
