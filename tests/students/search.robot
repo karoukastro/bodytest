@@ -26,7 +26,7 @@ Cenario: Registro não encontrado
     Register Should Not Be Found
 
 Cenario: Busca alunos por um único termo
-    [tags]      json
+
     ${fixture}          Get JSON        students-search.json
     ${students}         Set Variable    ${fixture['students']}
 
@@ -42,7 +42,7 @@ Cenario: Busca alunos por um único termo
     END
 
     Go to Students
-    Search Student By Name      David
+    Search Student By Name      ${word} 
 
     FOR     ${item}     IN      @{students}
         Student Name Should Be Visible      ${item['name']}

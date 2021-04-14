@@ -87,12 +87,6 @@ Request Removal By Email
     
     # xpath=//td[contains(text(), "carol@test.com")]/../td//button[@id="trash"]
 
-Confirm Removal
-    Click       text=SIM, pode apagar!
-
-Cancel Removal 
-    Click                           text=NÃO
-
 ##Validations
 Student Should Not Visible
     [Arguments]                 ${email}
@@ -101,8 +95,6 @@ Student Should Not Visible
 Student Should Be Visible
     [Arguments]                 ${email}
     Wait For Elements State     xpath=//td[contains(text(), "${email}")]    visible    5
-
-
      
 Student Name Should Be Visible
     [Arguments]         ${name}

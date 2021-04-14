@@ -3,7 +3,7 @@ Documentation       Remover Alunos
 
 Resource            ${EXECDIR}/resources/base.robot
 
-Test Setup         Start Admin Session
+Test Setup          Start Admin Session
 Test Teardown       Take Screenshot
 
 ***Test Cases***

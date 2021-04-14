@@ -44,8 +44,18 @@ Go to Plan Update Form
     Click           xpath=//td[contains( text(), "${title}")]/..//a[@class="edit"]
     Wait For Elements State         css=h1 >> text=Edição de plano     visible     5  
 
+Request Removal By Title
+    [Arguments]         ${title}
+
+    Click               xpath=//td[contains(text(), "${title}")]/..//button[@id="trash"]
+
 ## Validations
 Total Plan Should Be
     [Arguments]     ${total}
 
     Get Attribute       ${TOTAL_FIELD}      value    ==    ${total}   
+
+Plan Should Be Visible
+    [Arguments]                 ${title}
+    Wait For Elements State     xpath=//td[contains(text(), "${title}")]    visible    5
+     

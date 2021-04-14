@@ -18,7 +18,6 @@ Cenario: Atualizar um plano já cadastrado
     Remove Plan                      ${slim['title']}
 
     Insert Plan                      ${fat}
-
     Go to Plans
     Search Plan By Title             ${fat['title']}   
     Go to Plan Update Form           ${fat['title']} 

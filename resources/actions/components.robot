@@ -45,3 +45,10 @@ Get Required Alerts
     ${span}     Get Text        xpath=(//form//span)[${index}]
 
     [return]    ${span}
+
+## Links & Buttons
+Confirm Removal
+    Click       text=SIM, pode apagar!
+
+Cancel Removal 
+    Click                           text=NÃO
