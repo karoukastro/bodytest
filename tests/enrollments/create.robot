@@ -31,7 +31,7 @@ Cenario: Deve matricular um aluno em um plano
 
     Insert Student              ${sara}
     Insert Plan                 ${fit}
-
+ 
     Go to Enrolls
     Go to Form Enrolls
     Select Student              ${sara['name']}
