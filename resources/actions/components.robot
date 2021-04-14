@@ -10,6 +10,10 @@ Toaster Text Should be
 #    Wait For Elements State     css=.Toastify__toast-body       visible     5
 #    Get Text                    css=.Toastify__toast-body   should be        Usuário ou senha inválido     # Ponto é para classe
 
+Toaster Error Text Should be
+    [Arguments]                 ${expect_text}
+    Wait For Elements State     css=.Toastify__toast--error >> text=${expect_text}       visible     5  
+
 Alert Text Should Be
     [Arguments]                 ${expect_text}
     Wait For Elements State     css=form span >> text=${expect_text}       visible     5  
